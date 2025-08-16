@@ -69,30 +69,3 @@ function testScope() {
   console.log("Original let:", age);
   
   console.log("-----");
-  
-  // 3. Hoisting behavior
-  console.log("Hoisted var:", hoistedVar); // ✅ Undefined (due to hoisting)
-  var hoistedVar = "Now I am defined";
-  
-  // console.log("Hoisted let:", hoistedLet); // ❌ ReferenceError
-  let hoistedLet = "This is let";
-  
-  console.log("-----");
-  
-  // 4. Variable shadowing
-  let message = "Outside block";
-  
-  if (true) {
-    let message = "Inside block"; // This is a new variable, not overwriting outer
-    console.log("Block-scoped let:", message);
-  }
-  console.log("Outer-scoped let:", message);
-  
-  var place = "Mumbai";
-  
-  if (true) {
-    var place = "Delhi"; // Overwrites outer var
-    console.log("Block var:", place);
-  }
-  console.log("Outer var:", place); // Same as block var: overwritten!
-  
