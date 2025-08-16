@@ -9,16 +9,14 @@ let marks = 85
 console.log(`I got the test score of ${marks + 10} and the DataType is: ${typeof (marks)}`)
 
 // Boolean Example
-var isWeekend = false
+var isWeekend = true
 if (isWeekend) {
-    let isWeekend = true; // This is a new variable, not overwriting outer
-    console.log(`Yay! It's the weekend! and the DataType is: ${typeof isWeekend}`);
-    var isWeekend = false; // This overwrites the outer variable
-    console.log(`Yay! It's the weekend! and the DataType is: ${typeof isWeekend}`);
+    let isWeekend = false; // This is a new variable, not overwriting outer
+    console.log(`Yay! It's the weekend! and value of variable is ${isWeekend} and the DataType is: ${typeof isWeekend}`);
+    // var isWeekend = true; // Will not allow this to be executed as it is already declared in the if block
 } else {
     let isWeekend = false; // This is a new variable, not overwriting outer
-    console.log(`It's a weekday, back to work! and the DataType is: ${typeof isWeekend}`);
-    console.log(`Relax, it is a weekend! and the DataType is: ${typeof isWeekend}`);
+    console.log(`It's a weekday, back to work! and value of variable is ${isWeekend} and the DataType is: ${typeof isWeekend}`);
 } 
 
 // Undefined Example
@@ -38,6 +36,7 @@ const largeNumber = 9007199254740991n;
 console.log(`A very large number: ${largeNumber} and the DataType is: ${typeof largeNumber}`);
 
 console.log("------------ Variable Declaration Differences below ------------");
+
 const variableDeclarationDifferences = `
 1. var variables are function-scoped, can be redeclared, and hoisted with a default value of undefined.
 2. let variables are block-scoped, cannot be redeclared in the same scope, and are hoisted without a default value.
@@ -63,7 +62,7 @@ function testScope() {
   // 2. Re-declaration
   var userName = "Alice";
   var userName = "Bob"; // ✅ Allowed with var
-  console.log("Re-declared var:", userName);
+  console.log("Re-declared var:", userName); 
   
   let age = 25;
   // let age = 30; // ❌ Error: Identifier 'age' has already been declared
